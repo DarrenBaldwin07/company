@@ -1,3 +1,12 @@
+import {
+	ClerkProvider,
+	Show,
+	SignInButton,
+	SignUpButton,
+	UserButton,
+} from '@clerk/nextjs';
+import { shadcn } from '@clerk/ui/themes';
+import { Button } from '@repo/ui/components/button';
 import type { Metadata } from 'next';
 import localFont from 'next/font/local';
 import './globals.css';
@@ -24,7 +33,26 @@ export default function RootLayout({
 	return (
 		<html lang='en'>
 			<body className={`${geistSans.variable} ${geistMono.variable}`}>
-				<Providers>{children}</Providers>
+				<ClerkProvider appearance={{ theme: shadcn }}>
+					<Providers>
+						<header className='flex h-16 items-center justify-end border-b px-6'>
+							<nav aria-label='Account' className='flex items-center gap-3'>
+								<Show when='signed-out'>
+									<SignInButton>
+										<Button variant='ghost'>Sign in</Button>
+									</SignInButton>
+									<SignUpButton>
+										<Button>Sign up</Button>
+									</SignUpButton>
+								</Show>
+								<Show when='signed-in'>
+									<UserButton />
+								</Show>
+							</nav>
+						</header>
+						{children}
+					</Providers>
+				</ClerkProvider>
 			</body>
 		</html>
 	);

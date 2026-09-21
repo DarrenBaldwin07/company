@@ -2,4 +2,7 @@ packages:
   - 'apps/*'
   - 'packages/*'
 allowBuilds:
+  bufferutil: false
+  core-js: false
   esbuild: true
+  utf-8-validate: false
