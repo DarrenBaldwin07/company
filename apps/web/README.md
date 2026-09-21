@@ -34,3 +34,21 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+## UI components
+
+The web app uses Tailwind CSS 4.3.3 and shadcn/ui's Radix Nova preset. Shared components, the `cn` helper, and neutral theme tokens live in `packages/ui`. The theme follows the system color preference and uses the app's local Geist fonts.
+
+With Node 24+ and the repository's pnpm version, add components from the repository root:
+
+```bash
+pnpm dlx shadcn@latest add dialog -c apps/web
+```
+
+The CLI places shared primitives in `packages/ui/src/components` and app-specific compositions in `apps/web/components`. Import shared components with:
+
+```tsx
+import { Button } from '@repo/ui/components/button';
+```
+
+Existing starter imports such as `@repo/ui/button` remain available.

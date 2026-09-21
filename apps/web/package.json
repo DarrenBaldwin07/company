@@ -12,20 +12,23 @@
 	},
 	"dependencies": {
 		"@repo/api": "workspace:*",
+		"@repo/db": "workspace:*",
 		"@repo/ui": "workspace:*",
 		"@tanstack/react-query": "^5.103.1",
 		"hono": "^4.13.8",
 		"next": "16.3.4",
 		"react": "19.2.8",
-		"react-dom": "19.2.8",
-		"@repo/db": "workspace:*"
+		"react-dom": "19.2.8"
 	},
 	"devDependencies": {
 		"@repo/typescript-config": "workspace:*",
+		"@tailwindcss/postcss": "4.3.3",
 		"@types/node": "26.4.1",
 		"@types/react": "19.2.18",
 		"@types/react-dom": "19.2.5",
-		"typescript": "7.0.2",
-		"oxlint": "1.83.0"
+		"oxlint": "1.83.0",
+		"postcss": "^8.5.28",
+		"tailwindcss": "4.3.3",
+		"typescript": "7.0.2"
 	}
 }
