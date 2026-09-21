@@ -17,8 +17,8 @@
 		"lint:ox": "oxlint --deny-warnings ."
 	},
 	"devDependencies": {
-		"oxfmt": "^0.70.0",
-		"oxlint": "^1.85.0",
+		"oxfmt": "0.68.0",
+		"oxlint": "1.83.0",
 		"turbo": "^2.11.2",
 		"typescript": "7.0.2"
 	},

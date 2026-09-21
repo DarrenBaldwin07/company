@@ -25,17 +25,17 @@
 		"db:studio": "drizzle-kit studio"
 	},
 	"dependencies": {
-		"drizzle-orm": "^0.45.3",
+		"drizzle-orm": "0.45.2",
 		"pg": "^8.23.0",
 		"dotenv": "^18.0.1"
 	},
 	"devDependencies": {
-		"drizzle-kit": "^0.31.11",
+		"drizzle-kit": "0.31.10",
 		"@types/pg": "^8.23.1",
 		"@repo/typescript-config": "workspace:*",
 		"@types/node": "26.4.1",
 		"tsx": "^4.23.13",
 		"typescript": "7.0.2",
-		"oxlint": "^1.85.0"
+		"oxlint": "1.83.0"
 	}
 }
