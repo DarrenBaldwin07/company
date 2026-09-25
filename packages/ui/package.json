@@ -12,7 +12,7 @@
 	"scripts": {
 		"lint": "oxlint --config ../../.oxlintrc.json --deny-warnings .",
 		"generate:component": "turbo gen react-component",
-		"check-types": "tsc --noEmit"
+		"check-types": "bun --bun tsc --noEmit"
 	},
 	"devDependencies": {
 		"@repo/typescript-config": "workspace:*",

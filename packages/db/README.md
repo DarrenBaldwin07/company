@@ -13,5 +13,5 @@ Import `getDb` and `greetings` from `@repo/db`, or schema definitions from
 The runtime entry point is server-only; browser components should use the API.
 
 See the root README for Docker Compose setup and migration commands. Run root
-`pnpm dev` or `pnpm build` to build this package before its consumers. If running
-an app directly, first run `pnpm --filter @repo/db build`.
+`bun run dev` or `bun run build` to build this package before its consumers. If running
+an app directly, first run `bun run --filter @repo/db build`.

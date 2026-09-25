@@ -15,14 +15,14 @@
 		}
 	},
 	"scripts": {
-		"build": "tsc",
-		"dev": "tsc --watch",
-		"check-types": "tsc --noEmit",
+		"build": "bun --bun tsc",
+		"dev": "bun --bun tsc --watch",
+		"check-types": "bun --bun tsc --noEmit",
 		"lint": "oxlint --config ../../.oxlintrc.json --deny-warnings .",
-		"db:generate": "drizzle-kit generate",
-		"db:migrate": "drizzle-kit migrate",
-		"db:seed": "tsx src/seed.ts",
-		"db:studio": "drizzle-kit studio"
+		"db:generate": "bun --bun drizzle-kit generate",
+		"db:migrate": "bun --bun drizzle-kit migrate",
+		"db:seed": "bun src/seed.ts",
+		"db:studio": "bun --bun drizzle-kit studio"
 	},
 	"dependencies": {
 		"drizzle-orm": "0.45.2",
@@ -34,7 +34,6 @@
 		"@types/pg": "^8.23.1",
 		"@repo/typescript-config": "workspace:*",
 		"@types/node": "26.4.1",
-		"tsx": "^4.23.13",
 		"typescript": "7.0.2",
 		"oxlint": "1.83.0"
 	}

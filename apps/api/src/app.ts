@@ -9,7 +9,7 @@ export const app = new Hono()
 			where: (greetings, { eq }) => eq(greetings.id, 'hello'),
 		});
 		if (!greeting) {
-			return c.json({ error: 'Greeting not found. Run pnpm db:seed.' }, 404);
+			return c.json({ error: 'Greeting not found. Run bun run db:seed.' }, 404);
 		}
 		return c.json({ message: greeting.message });
 	});

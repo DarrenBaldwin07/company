@@ -4,11 +4,11 @@
 	"type": "module",
 	"private": true,
 	"scripts": {
-		"dev": "next dev --port 3001",
-		"build": "next build",
-		"start": "next start",
+		"dev": "bun --bun next dev --port 3001",
+		"build": "bun --bun next build",
+		"start": "bun --bun next start",
 		"lint": "oxlint --config ../../.oxlintrc.json --deny-warnings .",
-		"check-types": "next typegen && tsc --noEmit"
+		"check-types": "bun --bun next typegen && bun --bun tsc --noEmit"
 	},
 	"dependencies": {
 		"@repo/ui": "workspace:*",
